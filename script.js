@@ -21,15 +21,13 @@ while (cardsnumber % 2 != 0 || cardsnumber > 14 || cardsnumber < 4) {
     cardsnumber = parseInt(prompt("Qual o número de cartas? Somente número par entre 4 a 14"));
 }
 
-for (let i = 0; i < cardsnumber / 2; i++) {
+for (let i = 0; i < cardsnumber/2; i++) {
     arraycards.push(`<li onclick="turn(this)"> <img src="img/front.png" alt="papagaio da frente da carta">  
     ${imgs[i]} </li>`);
-
     arraycards.push(`<li onclick="turn(this)"> <img src="img/front.png" alt="papagaio da frente da carta">  
     ${imgs[i]} </li>`);
     arraycards.sort(randomSort);
 }
-
 //embaralha 
 arraycards.sort(randomSort);
 
@@ -94,3 +92,4 @@ function untap(card1, card2) {
     card2.parentNode.children[0].classList.remove('disappears');
     card2.parentNode.children[1].classList.remove('appears');
     card2.parentNode.children[1].classList.add('disappears');
+}

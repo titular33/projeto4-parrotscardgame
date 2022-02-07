@@ -1,4 +1,4 @@
-let cardsnumber = parseInt(prompt("Qual o número de cartas? Número par de 4 a 14"));
+let cardsNumber = parseInt(prompt("Qual o número de cartas? Número par de 4 a 14"));
 let win = 0;
 let total = 0;
 let front;
@@ -17,11 +17,11 @@ let imgs = [
 imgs.sort(randomSort);
 let arraycards = [];
 
-while (cardsnumber % 2 != 0 || cardsnumber > 14 || cardsnumber < 4) {
-    cardsnumber = parseInt(prompt("Qual o número de cartas? Somente número par entre 4 a 14"));
+while (cardsNumber % 2 != 0 || cardsNumber > 14 || cardsNumber < 4) {
+    cardsNumber = parseInt(prompt("Qual o número de cartas? Somente número par entre 4 a 14"));
 }
 
-for (let i = 0; i < cardsnumber/2; i++) {
+for (let i = 0; i < cardsNumber/2; i++) {
     arraycards.push(`<li onclick="turn(this)"> <img src="img/front.png" alt="papagaio da frente da carta">  
     ${imgs[i]} </li>`);
     arraycards.push(`<li onclick="turn(this)"> <img src="img/front.png" alt="papagaio da frente da carta">  
@@ -79,7 +79,7 @@ function test(card1, card2) {
 }
 
 function game() {
-    if (win === cardsnumber) {
+    if (win === cardsNumber) {
         alert("você venceu em " + total + " jogadas");
     }
 }
